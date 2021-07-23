@@ -51,11 +51,27 @@ function init() {
 
     function getCoordinates(time) {
         // TODO: implement body of this function
-		const x = Math.floor(Math.random())
-        const y = Math.floor(Math.random())
-        // const x = time / timer
-
-        return [x, y];
+        if (time % 10 <= 2.5) {
+            const x = (time % 10) / 2.5
+            const y = 0
+            console.log(x, y, time % 10)
+            return [x, y];
+        } else if (time % 10 > 2.5 && time % 10 <= 5) {
+            const x = 1
+            const y = (time % 10 - 2.5) / 2.5
+            console.log(x, y, time % 10)
+            return [x, y];
+        } else if (time % 10 > 5 && time % 10 <= 7.5) {
+            const x = (7.5 - time % 10) / 2.5
+            const y = 1
+            console.log(x, y, time % 10)
+            return [x, y];
+        } else if (time % 10 > 7.5 && time % 10 <= 10) {
+            const x = 0
+            const y = (10 - time % 10) / 2.5
+            console.log(x, y, time % 10)
+            return [x, y];
+        }
     }
 
     /**
