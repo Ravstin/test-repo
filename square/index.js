@@ -48,9 +48,14 @@ function init() {
      * @param {number} time - Time to calculate coordinates
      * @returns {number[]} - Coordinates in Array, from 0 to 1
      */
+
     function getCoordinates(time) {
         // TODO: implement body of this function
-		return [0, 0];
+		const x = Math.floor(Math.random())
+        const y = Math.floor(Math.random())
+        // const x = time / timer
+
+        return [x, y];
     }
 
     /**

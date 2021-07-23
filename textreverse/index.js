@@ -3,7 +3,12 @@
  */
 function reverse(str) {
     //TODO: Implement this function
-    return str;
+    var splitString = str.split("");
+    var reverseArray = splitString.reverse();
+    var joinArray = reverseArray.join("");
+    return joinArray;
+
+    // return str;
 }
 
 /**********************************************/
